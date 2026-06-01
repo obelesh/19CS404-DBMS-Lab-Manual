@@ -105,124 +105,155 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+-- ![image](https://github.com/user-attachments/assets/bc6f6af1-fbb9-435f-89de-d52157dd57f5)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+insert into Products(Name,Category,Price,Stock) values('Smartphone','Electronics',800,150),('Headphones','Accessories',200,300);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/5b1ca3a5-04a7-4b9f-b4cb-f78193467890)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- ![image](https://github.com/user-attachments/assets/3a42018e-6f92-4ca1-a71f-196d95c05f1d)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+-- create table item(
+item_id TEXT primary key,
+item_desc TEXT not null,
+rate INTEGER not null,
+icom_id TEXT(4),
+foreign key (icom_id) references company (com_id) on update set null on delete set null);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/415862ba-5585-4250-9334-f33432f9ba32)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- ![image](https://github.com/user-attachments/assets/f534be86-f09f-4fc5-84c7-7636480ff637)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+-- create table Products(
+ProductID int primary key,
+ProductName text not null,
+Price real,
+Stock int,
+check(Price>0),
+check(Stock>=0));
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/41a9b76e-11d8-4e02-932e-4a80e1a056cc)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-- ![image](https://github.com/user-attachments/assets/ed864134-23f6-418d-b337-243672210a2a)
+
+
 
 ```sql
--- Paste your SQL code below for Question 4
+create table Attendance(
+AttendanceID INTEGER primary key,
+EmployeeID INTEGER,
+AttendanceDate DATE,
+Status TEXT,
+check(Status in ('Present','Absent','Leave')),
+foreign key(EmployeeID) references Employees(EmployeeID));
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/c11c1746-c8fe-486a-8534-363d0de39d38)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+-- ![image](https://github.com/user-attachments/assets/4aa9e9db-66f1-4c8c-a5eb-00a95cab7e38)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+-- insert into Products(ProductID,Name,Category,Price,Stock)
+values(101,'Laptop','Electronics',1500,50);
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/48253236-69d4-42ef-b69e-8a1433ce0941)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+-- ![image](https://github.com/user-attachments/assets/d18b1840-dac9-4a72-9609-513af975f2b3)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+-- alter table Student_details
+add column ParentsNumber number;
+alter table Student_details
+add column Adhar_Number number;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/3a7d27ca-e014-40a1-853e-4de06457b1b1)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- ![image](https://github.com/user-attachments/assets/04a4d3cc-c44a-4129-8687-24e203d59dcb)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+-- create table Invoices(
+InvoiceID int primary key,
+InvoiceDate date,
+Amount real,
+DueDate date,
+OrderID int,
+check (amount>0),
+check (DueDate>InvoiceDate),
+foreign key (OrderID)references Orders(OrderID));
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/0ea83df4-6b5e-4a85-a384-24bb8541f877)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+-- ![image](https://github.com/user-attachments/assets/56f83ce6-c560-410d-bce1-285ce94a4479)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+-- create table Customers(
+CustomerID INTEGER,
+Name TEXT,
+Email TEXT,
+JoinDate DATETIME);
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/6dba59b3-bca1-4f06-83ae-91b7895823f1)
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- ![image](https://github.com/user-attachments/assets/6b02a17f-22d7-4ee7-a149-ba6654800a58)
 
 ```sql
--- Paste your SQL code below for Question 9
+-- insert into Student_details select * from Archived_students;
 ```
 
-**Output:**
 
-![Output9](output.png)
-
-**Question 10**
----
--- Paste Question 10 here
-
-```sql
--- Paste your SQL code below for Question 10
-```
-
-**Output:**
-
-![Output10](output.png)
-
-
-## RESULT
-Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
